@@ -17,8 +17,8 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "#about", label: "Ποιοι Είμαστε" },
-    { href: "#stats", label: "Επιτεύγματα" },
-    { href: "#why-donate", label: "Γιατί να Δώσω Αίμα" },
+    { href: "#events", label: "Εκδηλώσεις" },
+    { href: "#services", label: "Ενημέρωση" },
     { href: "#contact", label: "Επικοινωνία" },
   ];
 
