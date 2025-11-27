@@ -58,7 +58,7 @@ const EventsSection = () => {
                   {event.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed whitespace-pre-line">
+                <p className="text-muted-foreground mb-4 leading-relaxed whitespace-pre-line text-xs">
                   {event.description}
                 </p>
 
