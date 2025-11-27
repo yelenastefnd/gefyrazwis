@@ -14,7 +14,7 @@ const EventsSection = () => {
   const upcomingEvents: Event[] = [
     {
       id: 1,
-      title: "Εθελοντική Αιμοδοσία - Κοζάνη",
+      title: "35η ΕΘΕΛΟΝΤΙΚΗ ΑΙΜΟΔΟΣΙΑ ΑΝΩ ΚΩΜΗ",
       date: "15 Δεκεμβρίου 2025",
       time: "09:00 - 14:00",
       location: "Δημοτικό Κατάστημα Κοζάνης",
