@@ -42,7 +42,7 @@ const EventsSection = () => {
         </div>
 
         {/* Events Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
           {upcomingEvents.map((event, index) => <div key={event.id} style={{
           animationDelay: `${index * 0.1}s`
         }} className="group relative p-6 rounded-2xl bg-card glass-card hover:shadow-xl transition-all duration-300 flex-col flex items-start justify-start">
