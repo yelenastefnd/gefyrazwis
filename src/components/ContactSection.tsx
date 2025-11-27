@@ -47,7 +47,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["dimodoteskoza@yahoo.gr"],
+      details: ["aimodoteskoza@yahoo.gr"],
     },
     {
       icon: MapPin,
