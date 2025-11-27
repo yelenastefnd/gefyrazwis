@@ -68,7 +68,7 @@ const EventsSection = () => {
                     <span>{event.time}</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <MapPin className="w-4 h-4 text-primary" />
+                    <MapPin className="text-primary w-[16px] h-[16px]" />
                     <span>{event.location}</span>
                   </div>
                 </div>
