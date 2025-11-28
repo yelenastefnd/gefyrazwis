@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Heart, ChevronDown, Droplets } from "lucide-react";
+import logoImage from "@/assets/logo-gefyra.png";
 
 const HeroSection = () => {
   return (
@@ -18,8 +19,18 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center stagger-children">
+          {/* Logo */}
+          <div className="mb-8">
+            <img
+              src={logoImage}
+              alt="ΓΕΦΥΡΑ ΖΩΗΣ Logo"
+              className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-2xl"
+              style={{ filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.3))" }}
+            />
+          </div>
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground mb-6">
             <Heart className="w-4 h-4 heartbeat" />
             <span className="text-sm font-medium">20 Χρόνια Προσφοράς • 2005-2025</span>
           </div>
