@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://your-domain.com/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.seakozanis.gr/</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://storage.googleapis.com/gpt-engineer-file-uploads/ePKh1RWL4eauz2VWUI6Uf6wtEBU2/uploads/1764257624639-logo gefyra.png</image:loc>
+      <image:title>ΓΕΦΥΡΑ ΖΩΗΣ Logo</image:title>
+      <image:caption>Σύλλογος Εθελοντών Αιμοδοτών Κοζάνης</image:caption>
+    </image:image>
   </url>
 </urlset>
