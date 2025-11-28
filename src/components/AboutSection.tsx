@@ -1,7 +1,11 @@
 import { Heart, Users, Calendar, MapPin } from "lucide-react";
 import logoImage from "@/assets/logo-gefyra.png";
 
+const FOUNDING_YEAR = 2005;
+
 const AboutSection = () => {
+  const yearsOfService = new Date().getFullYear() - FOUNDING_YEAR;
+
   return (
     <section id="about" className="py-24 bg-muted/50">
       <div className="container mx-auto px-4">
@@ -14,7 +18,7 @@ const AboutSection = () => {
             </div>
 
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground">
-              20 Χρόνια
+              {yearsOfService} Χρόνια
               <span className="text-gradient-primary block">Δωρεάς Ζωής</span>
             </h2>
 
