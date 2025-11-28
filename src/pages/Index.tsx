@@ -5,7 +5,6 @@ import StatsSection from "@/components/StatsSection";
 import EventsSection from "@/components/EventsSection";
 import ServicesSection from "@/components/ServicesSection";
 import WhyDonateSection from "@/components/WhyDonateSection";
-import SocialMediaSection from "@/components/SocialMediaSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -19,7 +18,6 @@ const Index = () => {
       <EventsSection />
       <ServicesSection />
       <WhyDonateSection />
-      <SocialMediaSection />
       <ContactSection />
       <Footer />
     </main>

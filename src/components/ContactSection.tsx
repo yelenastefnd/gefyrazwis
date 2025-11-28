@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Heart, Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Heart, Phone, Mail, MapPin, Clock, Send, Instagram, Facebook } from "lucide-react";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -198,6 +198,47 @@ const ContactSection = () => {
               />
             </div>
           </div>
+        </div>
+
+        {/* Social Media Section */}
+        <div className="mt-16 pt-12 border-t border-border/30">
+          <div className="text-center mb-8">
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
+              Ακολούθησέ μας στα Social Media
+            </h3>
+            <p className="text-muted-foreground">
+              Μείνε ενημερωμένος για τις δράσεις μας!
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="https://www.instagram.com/gefyrazwis/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25"
+            >
+              <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <span>Instagram</span>
+              <span className="text-white/80 text-sm">@gefyrazwis</span>
+            </a>
+            
+            <a
+              href="https://www.facebook.com/gefyrazwis?locale=el_GR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#1877F2] text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25"
+            >
+              <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <span>Facebook</span>
+              <span className="text-white/80 text-sm">ΓΕΦΥΡΑ ΖΩΗΣ</span>
+            </a>
+          </div>
+          
+          <p className="text-center text-muted-foreground mt-6 flex items-center justify-center gap-2">
+            <Heart className="w-5 h-5 text-primary heartbeat" />
+            <span>Κάθε follow και share βοηθάει να σωθούν ζωές!</span>
+          </p>
         </div>
       </div>
     </section>

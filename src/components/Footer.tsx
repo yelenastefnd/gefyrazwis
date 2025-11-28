@@ -112,9 +112,16 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-background/50 text-sm text-center md:text-left">
-            © 2005-2025 ΓΕΦΥΡΑ ΖΩΗΣ - Σύλλογος Εθελοντών Αιμοδοτών Κοζάνης. Με επιφύλαξη παντός δικαιώματος.
-          </p>
+          <div className="flex items-center gap-4">
+            <img
+              src={logoImage}
+              alt="ΓΕΦΥΡΑ ΖΩΗΣ Logo"
+              className="h-10 w-auto brightness-0 invert opacity-70"
+            />
+            <p className="text-background/50 text-sm text-center md:text-left">
+              © 2005-2025 ΓΕΦΥΡΑ ΖΩΗΣ - Σύλλογος Εθελοντών Αιμοδοτών Κοζάνης.
+            </p>
+          </div>
           <div className="flex items-center gap-2 text-background/70 text-sm">
             <Heart className="w-4 h-4 text-primary heartbeat" />
             <span>Δωρεά Ζωής</span>
