@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Heart, Phone, Mail, MapPin, Clock, Send, Facebook } from "lucide-react";
+import { Heart, Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -184,30 +184,7 @@ const ContactSection = () => {
               </div>
             ))}
 
-            {/* Social & Website */}
-            <div className="p-6 rounded-2xl bg-primary/5 border-2 border-primary/20">
-              <h4 className="font-semibold text-foreground mb-4">Βρείτε μας Online</h4>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="https://www.seakozanis.gr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary-hover transition-colors"
-                >
-                  <Heart className="w-4 h-4" />
-                  www.seakozanis.gr
-                </a>
-                <a
-                  href="#"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
-                >
-                  <Facebook className="w-4 h-4" />
-                  Facebook
-                </a>
-              </div>
-            </div>
-
-            {/* Map placeholder */}
+            {/* Map */}
             <div className="rounded-2xl overflow-hidden h-64 bg-muted">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.2!2d21.789!3d40.300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDE4JzAwLjAiTiAyMcKwNDcnMjAuNCJF!5e0!3m2!1sel!2sgr!4v1"
