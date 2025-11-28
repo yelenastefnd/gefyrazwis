@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 interface Event {
   id: number;
@@ -77,8 +77,8 @@ const EventsSection = () => {
               {/* Hover indicator */}
               <div className="mt-4 pt-4 border-t border-border">
                 <span className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
-                  Περισσότερα
-                  <ArrowRight className="w-4 h-4" />
+                  ​ΣΑΣ ΠΕΡΙΜΕΝΟΥΜΕ! 
+                  
                 </span>
               </div>
             </div>)}
