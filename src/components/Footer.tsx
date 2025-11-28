@@ -1,5 +1,6 @@
-import { Heart, Phone, Mail, MapPin } from "lucide-react";
+import { Heart, Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import logoImage from "@/assets/logo-gefyra.png";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
@@ -17,9 +18,45 @@ const Footer = () => {
               Σύλλογος Εθελοντών Αιμοδοτών, Δοτών Αιμοπεταλίων, Δωρητών Οργάνων Σώματος, 
               Μυελού των Οστών και Φίλων Εθελοντών Κοζάνης.
             </p>
-            <p className="text-background/50 text-sm">
+            <p className="text-background/50 text-sm mb-6">
               Ιδρύθηκε: 3 Νοεμβρίου 2005
             </p>
+            
+            {/* Social Media Buttons */}
+            <div className="flex gap-3">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 border-0 text-white hover:opacity-90 hover:text-white transition-all duration-300 hover:scale-105"
+              >
+                <a
+                  href="https://www.instagram.com/gefyrazwis/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ακολουθήστε μας στο Instagram"
+                >
+                  <Instagram className="w-5 h-5 mr-2" />
+                  Instagram
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="bg-[#1877F2] border-0 text-white hover:bg-[#166FE5] hover:text-white transition-all duration-300 hover:scale-105"
+              >
+                <a
+                  href="https://www.facebook.com/gefyrazwis?locale=el_GR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ακολουθήστε μας στο Facebook"
+                >
+                  <Facebook className="w-5 h-5 mr-2" />
+                  Facebook
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Quick Links */}
