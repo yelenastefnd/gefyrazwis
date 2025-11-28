@@ -1,8 +1,12 @@
+# Robots.txt for ΓΕΦΥΡΑ ΖΩΗΣ - Σύλλογος Εθελοντών Αιμοδοτών Κοζάνης
+
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -10,7 +14,11 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
 User-agent: *
 Allow: /
 
-Sitemap: https://your-domain.com/sitemap.xml
+# Sitemap location
+Sitemap: https://www.seakozanis.gr/sitemap.xml
