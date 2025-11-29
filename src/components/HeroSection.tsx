@@ -1,10 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Heart, ChevronDown, Droplets } from "lucide-react";
-import logoImage from "@/assets/logo-gefyra.png";
+import logoImage from "@/assets/logo-gefyra-transparent.gif";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+      {/* Large Background Logo */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+        <img
+          src={logoImage}
+          alt=""
+          className="w-[600px] md:w-[800px] lg:w-[1000px] h-auto opacity-[0.08] scale-110"
+          style={{ filter: "blur(1px)" }}
+        />
+      </div>
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary-foreground/5 float" style={{ animationDelay: "0s" }} />
@@ -24,7 +34,7 @@ const HeroSection = () => {
             <img
               src={logoImage}
               alt="ΓΕΦΥΡΑ ΖΩΗΣ Logo"
-              className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-2xl"
+              className="h-36 md:h-44 lg:h-56 w-auto mx-auto drop-shadow-2xl"
               style={{ filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.3))" }}
             />
           </div>

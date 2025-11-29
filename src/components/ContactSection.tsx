@@ -26,15 +26,22 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Μήνυμα από ${formData.name}`);
+    const body = encodeURIComponent(
+      `Ονοματεπώνυμο: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Τηλέφωνο: ${formData.phone || "Δεν δόθηκε"}\n\n` +
+      `Μήνυμα:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:aimodoteskoza@yahoo.gr?subject=${subject}&body=${body}`;
 
     toast({
-      title: "Ευχαριστούμε για το μήνυμά σας!",
-      description: "Θα επικοινωνήσουμε μαζί σας σύντομα.",
+      title: "Το email σας ανοίγει!",
+      description: "Θα ανοίξει το πρόγραμμα email σας για αποστολή.",
     });
 
-    setFormData({ name: "", email: "", phone: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -201,42 +208,57 @@ const ContactSection = () => {
         </div>
 
         {/* Social Media Section */}
-        <div className="mt-16 pt-12 border-t border-border/30">
-          <div className="text-center mb-8">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
-              Ακολούθησέ μας στα Social Media
+        <div className="mt-20 pt-16 border-t border-border/30">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+              <Heart className="w-4 h-4 heartbeat" />
+              <span className="text-sm font-medium">Social Media</span>
+            </div>
+            <h3 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Ακολούθησέ μας στα
+              <span className="text-gradient-primary block">Social Media</span>
             </h3>
-            <p className="text-muted-foreground">
-              Μείνε ενημερωμένος για τις δράσεις μας!
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+              Μείνε ενημερωμένος για τις δράσεις μας και βοήθησε να διαδώσουμε το μήνυμα!
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <a
               href="https://www.instagram.com/gefyrazwis/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25"
+              className="group relative flex flex-col items-center gap-4 p-8 rounded-3xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 text-white transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30"
             >
-              <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform" />
-              <span>Instagram</span>
-              <span className="text-white/80 text-sm">@gefyrazwis</span>
+              <div className="p-4 rounded-2xl bg-white/20 backdrop-blur-sm">
+                <Instagram className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <div className="text-center">
+                <span className="text-2xl font-bold block">Instagram</span>
+                <span className="text-white/80 text-lg">@gefyrazwis</span>
+              </div>
+              <div className="absolute inset-0 rounded-3xl bg-white/0 group-hover:bg-white/10 transition-colors duration-300" />
             </a>
             
             <a
               href="https://www.facebook.com/gefyrazwis?locale=el_GR"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#1877F2] text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25"
+              className="group relative flex flex-col items-center gap-4 p-8 rounded-3xl bg-[#1877F2] text-white transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30"
             >
-              <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform" />
-              <span>Facebook</span>
-              <span className="text-white/80 text-sm">ΓΕΦΥΡΑ ΖΩΗΣ</span>
+              <div className="p-4 rounded-2xl bg-white/20 backdrop-blur-sm">
+                <Facebook className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <div className="text-center">
+                <span className="text-2xl font-bold block">Facebook</span>
+                <span className="text-white/80 text-lg">ΓΕΦΥΡΑ ΖΩΗΣ</span>
+              </div>
+              <div className="absolute inset-0 rounded-3xl bg-white/0 group-hover:bg-white/10 transition-colors duration-300" />
             </a>
           </div>
           
-          <p className="text-center text-muted-foreground mt-6 flex items-center justify-center gap-2">
-            <Heart className="w-5 h-5 text-primary heartbeat" />
+          <p className="text-center text-muted-foreground mt-10 flex items-center justify-center gap-2 text-lg">
+            <Heart className="w-6 h-6 text-primary heartbeat" />
             <span>Κάθε follow και share βοηθάει να σωθούν ζωές!</span>
           </p>
         </div>

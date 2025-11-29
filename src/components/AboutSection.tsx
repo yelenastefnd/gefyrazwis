@@ -1,5 +1,5 @@
 import { Heart, Users, Calendar, MapPin } from "lucide-react";
-import logoImage from "@/assets/logo-gefyra.png";
+import logoImage from "@/assets/logo-gefyra-transparent.gif";
 
 const FOUNDING_YEAR = 2005;
 
