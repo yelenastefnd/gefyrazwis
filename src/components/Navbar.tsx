@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Heart } from "lucide-react";
-import logoImage from "@/assets/logo-gefyra.png";
+import logoImage from "@/assets/logo-gefyra-transparent.gif";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

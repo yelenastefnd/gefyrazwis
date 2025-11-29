@@ -1,5 +1,5 @@
 import { Heart, Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
-import logoImage from "@/assets/logo-gefyra.png";
+import logoImage from "@/assets/logo-gefyra-transparent.gif";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
             <img
               src={logoImage}
               alt="ΓΕΦΥΡΑ ΖΩΗΣ Logo"
-              className="h-20 w-auto mb-4 brightness-0 invert"
+              className="h-24 w-auto mb-4"
             />
             <p className="text-background/70 mb-4 max-w-md">
               Σύλλογος Εθελοντών Αιμοδοτών, Δοτών Αιμοπεταλίων, Δωρητών Οργάνων Σώματος, 
@@ -111,12 +111,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <img
               src={logoImage}
               alt="ΓΕΦΥΡΑ ΖΩΗΣ Logo"
-              className="h-10 w-auto brightness-0 invert opacity-70"
+              className="h-16 w-auto"
             />
             <p className="text-background/50 text-sm text-center md:text-left">
               © 2005-2025 ΓΕΦΥΡΑ ΖΩΗΣ - Σύλλογος Εθελοντών Αιμοδοτών Κοζάνης.
