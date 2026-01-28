@@ -1,6 +1,6 @@
-import { Calendar, MapPin, Clock, Image } from "lucide-react";
+import { Calendar, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import bloodDonationImage from "@/assets/blood-donation-event.png";
 
 interface Event {
   id: number;
@@ -13,8 +13,6 @@ interface Event {
 }
 
 const EventsSection = () => {
-  const [eventImage, setEventImage] = useState<string | null>(null);
-  
   const upcomingEvent: Event = {
     id: 1,
     title: "35η ΕΘΕΛΟΝΤΙΚΗ ΑΙΜΟΔΟΣΙΑ ΑΝΩ ΚΩΜΗ",
@@ -45,19 +43,12 @@ const EventsSection = () => {
         {/* Event with Image */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
           {/* Image Box */}
-          <div className="relative rounded-2xl overflow-hidden bg-card glass-card min-h-[400px] flex items-center justify-center border-2 border-dashed border-primary/30">
-            {eventImage ? (
-              <img 
-                src={eventImage} 
-                alt="Αιμοδοσία" 
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="text-center p-8">
-                <Image className="w-16 h-16 text-primary/40 mx-auto mb-4" />
-                <p className="text-muted-foreground text-sm">Φωτογραφία Εκδήλωσης</p>
-              </div>
-            )}
+          <div className="relative rounded-2xl overflow-hidden bg-card glass-card min-h-[400px]">
+            <img 
+              src={bloodDonationImage} 
+              alt="Εθελοντική Αιμοδοσία" 
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Event Card */}
