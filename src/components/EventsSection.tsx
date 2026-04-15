@@ -1,10 +1,9 @@
 import { Calendar, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import eventStroumfakia from "@/assets/event-stroumfakia.jpg";
-import eventGrafeio from "@/assets/event-grafeio.jpg";
-import eventPtolemaida from "@/assets/event-ptolemaida.jpg";
-import eventProgramma from "@/assets/event-programma.png";
+import eventAlterlife from "@/assets/event-alterlife.png";
+import eventGrafeio from "@/assets/event-grafeio.png";
+import eventProgramma from "@/assets/event-programma-apr.png";
 
 interface Event {
   id: number;
@@ -20,38 +19,29 @@ const EventsSection = () => {
   const events: Event[] = [
     {
       id: 1,
-      title: "ΕΘΕΛΟΝΤΙΚΗ ΑΙΜΟΔΟΣΙΑ – ΣΤΡΟΥΜΦΑΚΙΑ",
-      date: "4 Μαρτίου 2026",
-      time: "15:30 – 19:30",
-      location: "2ο χιλ. Κοζάνης - Αιανής (περιοχή Παναγίας)",
-      description: "Εθελοντική Αιμοδοσία σε συνεργασία με τα Στρουμφάκια. Ελάτε να προσφέρουμε ζωή μαζί!",
-      image: eventStroumfakia,
-    },
-    {
-      id: 2,
-      title: "ΕΘΕΛΟΝΤΙΚΗ ΑΙΜΟΔΟΣΙΑ – ΠΑΝΕΠΙΣΤΗΜΙΟ ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ",
-      date: "10 Μαρτίου 2026",
-      time: "09:30 – 13:30",
-      location: "Περιοχή ΚΕΠΤΣΕ, Πτολεμαΐδα",
-      description: "Εθελοντική Αιμοδοσία σε συνεργασία με το Πανεπιστήμιο Δυτικής Μακεδονίας και τη Σχολή Επιστημών Υγείας.",
-      image: eventPtolemaida,
-    },
-    {
-      id: 3,
       title: "ΕΘΕΛΟΝΤΙΚΗ ΑΙΜΟΔΟΣΙΑ – ΓΡΑΦΕΙΟ ΣΥΛΛΟΓΟΥ",
-      date: "11 Μαρτίου 2026",
+      date: "22 Απριλίου 2026",
       time: "15:30 – 19:30",
       location: "Παύλου Χαρίση 23, Κοζάνη",
-      description: "Εθελοντική Αιμοδοσία στο γραφείο του Συλλόγου. Κάθε μονάδα αίματος είναι ανεκτίμητος θησαυρός!",
+      description: "13η Εθελοντική Αιμοδοσία στο γραφείο του Συλλόγου. Κάθε μονάδα αίματος είναι ανεκτίμητος θησαυρός!",
       image: eventGrafeio,
     },
     {
-      id: 4,
-      title: "ΠΡΟΓΡΑΜΜΑ ΑΙΜΟΔΟΣΙΩΝ ΜΑΡΤΙΟΥ",
-      date: "Μάρτιος 2026",
+      id: 2,
+      title: "ΕΘΕΛΟΝΤΙΚΗ ΑΙΜΟΔΟΣΙΑ – ALTERLIFE",
+      date: "25 Απριλίου 2026",
+      time: "09:30 – 13:30",
+      location: "Καστοριάς & Φλέμινγκ 0, Κοζάνη",
+      description: "Εθελοντική Αιμοδοσία σε συνεργασία με το ALTERLIFE Fitness Excellence. Ελάτε να προσφέρουμε ζωή μαζί!",
+      image: eventAlterlife,
+    },
+    {
+      id: 3,
+      title: "ΠΡΟΓΡΑΜΜΑ ΑΙΜΟΔΟΣΙΩΝ ΑΠΡΙΛΙΟΥ",
+      date: "Απρίλιος 2026",
       time: "Διάφορες ώρες",
       location: "Διάφορες τοποθεσίες",
-      description: "Πρόγραμμα Αιμοδοσιών Μαρτίου:\n\n04 ΣΤΡΟΥΜΦΑΚΙΑ 15:30 - 19:30\n10 ΠΤΟΛΕΜΑΪΔΑ ΑΕΙ 09:30 - 13:30\n11 ΓΡΑΦΕΙΟ 15:30 - 19:30\n18 ΠΕΡΙΦΕΡΕΙΑ 09:30 - 13:30\n28 ΓΥΜ. REVOLUTION 09:30 - 13:30\n30 ΩΝΑΣΕΙΟ ΛΥΚΕΙΟ 15:30 - 19:30",
+      description: "Πρόγραμμα Αιμοδοσιών Απριλίου:\n\n01 ΔΡΕΠΑΝΟ 15:30 - 19:30\n22 ΓΡΑΦΕΙΟ 15:30 - 19:30\n25 ALTERLIFE 09:30 - 13:30",
       image: eventProgramma,
     },
   ];
@@ -125,7 +115,7 @@ const EventsSection = () => {
         </div>
 
         {/* Event Thumbnail Buttons */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+        <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto mb-12">
           {events.map((event) => (
             <button
               key={event.id}
